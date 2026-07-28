@@ -1,0 +1,45 @@
+
+    body {
+        
+        font-family: Arial, sans-serif;
+        background-color: #071521;
+        text-align: center;
+    }
+    h1 {
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    p {
+        color: black;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 12px;
+        border: 2px solid black;
+        margin: 15px;
+    }
+
+    a {
+        color: blue;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #0d2c49;
+    padding: 5px;
+    margin: auto;
+
+}
+
+th {
+    background-color: #203346;
+    text-align: left;
+}
+
+td{
+    text-align: left;
+}
+

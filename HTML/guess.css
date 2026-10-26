@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+}
+
+body {
+    background-color: #261606;
+}
+
+div.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 90vh; 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: #261606;
+    border-radius: 5px;
+    margin: 3rem auto; 
+    max-width: 500px; 
+    width: 90%;
+}
+
+.game-header {
+    margin-bottom: 0;
+    margin-top: 3rem;
+}
+
+.game-header h1 {
+    color: #fbe311;
+    text-align: center;
+    font-size: 35px;
+    
+}
+
+.game-header p {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #f8ef97;
+    text-align: center;
+
+}
+
+.hint {
+    margin-top: 3rem;
+    border: 1px solid rgb(196, 196, 196, 0.05);
+    border-radius: 8px;
+    padding: 24px 16px;
+    background-color: #1c100577;
+    margin-bottom: 0;
+    max-width: 400px; 
+    width: 100%;
+    text-align: center;
+}
+
+.hint h2 {
+    color:#f8ef97;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 400px;
+    width: 100%;    
+}
+
+.game-content input[type="number"]{
+    background-color: #261606;
+    color: #f8ef97;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.game-content input[type="number"], button{
+    max-width: 400px; 
+    width: 100%;
+    padding: 24px 16px;
+    border: 1px solid rgb(196, 196, 196, 0.05);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+
+}
+
+.btn-submit {
+    background-color:#fbe311;
+    color: #261606;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #261606;
+    color: #fbe311;
+}
+.btn-restart {
+    background-color: #f8ef97;
+    color: #261606;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-restart:hover {
+    background-color: #261606;
+    color: #f8ef97;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<style>
+    .city {
+    background-color: red;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+}
+
+    #btn {
+        background-color: red;
+        color: burlywood;
+        border-radius: 10%;
+    }
+</style>
+
+<body>
+     <nav>
+        <a href="DAY4.html">DAY 4</a>
+        <a href="DAY6.html">DAY 6</a>
+    </nav>
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital city of England</p>
+        <p>London has over 9 million inhabitants</p>
+    
+        <h2>Oslo</h2>
+        <p>Oslo is the capital city of Norway</p>
+        <p>Oslo has over 700,000 inhabitants</p>
+
+        <h2>Rome</h2>
+        <p>Rome is the capital city of Italy.</p>
+        <p>Rome has over 4 million inhabitants</p>
+    </div>
+
+    <button id="btn" onclick="deploymsg()">Click Me</button>
+
+
+    <form>
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" placeholder="Enter Your First Name..." required><br><br>
+
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" placeholder="Enter your Last Name..." required><br><br>
+
+        <label for="email">E-mail Address</label><br>
+        <input type="email" id="email" placeholder="user@example.com" required><br><br>
+
+        <label for="phone-number">Phone Number</label><br>
+        <input type="number" id="phone-number" placeholder="000 000 000" required><br><br>
+
+        <label for="referral-codes">Referral Code</label><br>
+        <input type="text" id="referral-codes" required><br><br>
+
+        <label for="gender">Choose A Gender</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        
+
+        <label for="course">Choose A Course</label><br>
+        <input type="checkbox" id="computer-sci" name="course" value="computer-sci">
+        <label for="computer-sci">Computer Science</label><br>
+        <input type="checkbox" id="math" name="course" value="math">
+        <label for="math">Math</label>
+
+    </form>
+
+    <script>
+        function deploymsg() {
+            alert("Hello World!")
+        }
+    </script>
+</body>
+</html>

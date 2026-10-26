@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="guess.css">
+</head>
+<body>
+
+    <main>
+        <div class="game-container">
+            <div class="game-header">
+                <h1>Number Guessing Game</h1>
+                <p>I'm thinking of a number between 1 and 10. Try to guess it</p>
+                <div class="chances-container">
+                    <p>Chances Left: <span id="chances">3</span></p>
+                </div>
+            </div>
+            <div class="hint">
+                <h2 id="comment">...</h2>
+            </div>
+
+            <div class="game-content">
+                <label for="guessNumber"></label>
+                <input type="number" id="guessNumber" placeholder="Enter Number...">
+                <button id="submitButton" class="btn btn-submit">Guess</button>
+                <button id="restartButton" class="btn btn-restart" style="display: none;">Restart</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let secret = Math.floor(Math.random() * 10) + 1 
+        let chances = 3
+
+        let hint = document.getElementById("comment")
+        let chancesLeft = document.getElementById("chances")
+        let guessNumber = document.getElementById("guessNumber")
+        let submitButton = document.getElementById("submitButton")
+        let restartButton = document.getElementById("restartButton")
+
+        function disableGame(){
+            submitButton.disabled = true
+            guessNumber.disabled = true
+            restartButton.style.display = "block"
+        }
+
+        submitButton.addEventListener("click", () => {
+            
+            const userGuess = Number(guessNumber.value);
+
+            if (guessNumber.value !== "") { 
+                if (secret === userGuess) {
+                    hint.innerText = `Congratulations, The Number Is ${secret}`;
+                    disableGame();
+                } else {
+                    chances--;
+                    chancesLeft.innerText = chances;
+                    if (chances === 0) {
+                        hint.innerText = `Game Over! The number was ${secret}`;
+                        disableGame();
+                    } else {
+                        hint.innerText = userGuess > secret ? "Guess Lower" : "Guess Higher";
+                    }
+                }
+            }
+        });
+
+        restartButton.addEventListener("click", () => {
+            restartButton.style.display = "none"
+            secret = Math.floor(Math.random() * 10) + 1
+            hint.innerText = "..."
+            guessNumber.value = ""
+            submitButton.disabled = false
+            guessNumber.disabled = false
+            chances = 3
+            chancesLeft.innerText = chances
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JSDOM.js" defer></script>
+     <style>
+        .productCard {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            background-color: rgb(7, 7, 61);
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            background-color: rgb(3, 3, 45);
+            color: white;
+            padding: 8px;
+            width: 50vw;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Javascript DOM</h1>
+    <ul id="carList">
+
+    </ul>
+    <input id="carInput" style="padding: 8px;" placeholder="Enter Car Name..."><br><br>
+    <button onclick="addCar()" style="background-color: green; color: white; padding: 8px 12px; border-radius: 8px; border: 0;">Submit</button>
+    <button onclick="clearList()" style="background-color: red; color: white; padding: 8px 12px; border-radius: 8px; border: 0;">Clear</button>
+    <br>
+
+    <h2>Your BMI is: <span id="bmi"></span></h2>
+    <input type="number" id="weight" style="padding: 8px; margin-bottom: 3px;" placeholder="Enter Your Weight"><br>
+    <input type="number" id="height" style="padding: 8px; margin-bottom: 3px;" placeholder="Enter Your Height"><br>
+    <button onclick="calculateBMI()" style="background-color: green; color: white; padding: 8px 12px; border-radius: 8px; border: 0;">Calculate</button>
+
+    <script>
+        function calculateBMI(){
+            let weight = document.getElementById("weight")
+            let height = document.getElementById("height")
+            let bmiResult = document.getElementById("bmi")
+
+            let bmi = weight.value / height.value 
+            bmiResult.innerText = bmi
+
+        
+        }
+    </script>
+</body>
+</html>

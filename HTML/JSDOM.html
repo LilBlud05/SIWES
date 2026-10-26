@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM</title>
+    <script src = "JavaScript/script.js" defer></script>
+        <style>
+        .productCard {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            background-color: rgb(7,7,61);
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            background-color: rgb(3,3,45);
+            color: white;
+            padding: 8px;
+            width: 50vw;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <p id="subHeader">Javascript HTML</p>
+    <button onclick="updateheader()">Update Header</button>
+
+    <br>
+
+    <p id="counter" style="text-align: center; font-size: 80px;">0</p>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <button onclick="incrementCounter()">➕</button>
+        <button onclick="decrementCounter()">➖</button>
+        <button onclick="resetCounter()">Reset</button>
+    </div>
+
+
+<script>
+    function updateheader(){
+        let header = document.getElementById("header")
+        header.style.color = "#0000ff"
+        header.style.backgroundColor = "yellow"
+    }
+
+</script>
+</body>
+</html>
